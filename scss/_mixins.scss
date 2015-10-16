@@ -1,0 +1,5 @@
+@mixin rgb-bg-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  background-color: $color;
+}
