@@ -219,3 +219,17 @@ a {
         border-color: currentColor;
     }
 }
+
+.addthis_native_toolbox {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    
+    @media screen and (max-width: 600px) {
+        display: none;   
+    }
+    
+    a {
+        border: 0;   
+    }
+}
