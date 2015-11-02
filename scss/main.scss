@@ -118,6 +118,29 @@ html {
 	}
 }
 
+.createnew {
+    @extend .clear;
+    width: auto;
+    padding: 15px 25px;
+    border-radius: 25px;
+    height: auto;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: .8;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    text-align: center;
+    
+    @media screen and (max-width: 600px) {
+        margin: auto;
+        right: 20%;
+        left: 20%;
+    }
+}
+
 /* .sharebtn {
     @extend .clear;
     @include rgb-bg-color(rgba($d-blue,.4), white);
