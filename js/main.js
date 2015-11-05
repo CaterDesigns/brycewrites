@@ -1,14 +1,5 @@
-$(document).ready(function() {
-    
     $(document).on("keypress", "form", function(event) { 
         return event.keyCode != 13;
-    });
-
-    // Clear input
-    $('.clear').click(function() {
-        $('form').removeClass('selected');
-        $('.input').val('');
-        $('.bryceoutput').text($('.input').val());
     });
 
     // Change message based on input
@@ -42,17 +33,24 @@ $(document).ready(function() {
         return vars;
     }
     
+    // Clear input
+    $('.clear').click(function() {
+        $('form').removeClass('selected');
+        $('.input').val('');
+        $('.bryceoutput').text($('.input').val());
+    });
+
+    $('.bryceoutput').text($('input#bryceinput').val());
+
     // Label mover
     $('input#bryceinput').focus(function(){
         $('form').addClass('selected');
     });
     
     var text_value = $('input#bryceinput').val();
-    if(text_value != '')
+    if(text_value)
     {
-        $('input#bryceinput').blur(function(){
-            $('form').removeClass('selected'); 
-        });  
+            $('form').addClass('selected'); 
     }
     
     // Checks for query and hides UI
@@ -67,7 +65,7 @@ $(document).ready(function() {
         $('.createnew').css("display","none");
         $('.addthis_native_toolbox').css("display","none");
     }
-    
+
     // Adjusts text size of output for initial load.
     var outputnumber = $('.bryceoutput').text();
 
@@ -80,7 +78,6 @@ $(document).ready(function() {
     } else {
         $('.bryceoutput').css("font-size", "10em");
     }
-});
 /* 
 var hashTO;
 $('#myTextField').on('keyup', function () {
