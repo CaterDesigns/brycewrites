@@ -131,52 +131,53 @@ html {
     position: absolute;
     top: 20px;
     right: 20px;
+    // transform: translateX(-50%);
     margin: 0;
     text-align: center;
     
     @media screen and (max-width: 600px) {
         margin: auto;
+        top:20px;
         right: 20%;
         left: 20%;
+        transform: none;
     }
 }
 
-/* .sharebtn {
-    @extend .clear;
+.sharebtn {
+    @extend .createnew;
     @include rgb-bg-color(rgba($d-blue,.4), white);
-    width: auto;
     padding: 9px 20px;
+    width: 90px;
     border-radius: 18px;
     height: 36px;
     font-size: 11px;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: .7;
     border: 1px solid rgba(255,255,255,.75);
     position: absolute;
     bottom: 15px;
     left: 20px;
     top: auto;
     margin: 0;
-}
-
- .imagewrapper {
-    position: absolute;
-    top: 100%;
-    overflow: hidden;
-    height: 0;
-    width: 0;
-    visibility: hidden;
     
-    &.show {
-        width: 500px;
-        height: 500px;
-        visibility: visible;
+    @media screen and (max-width: 600px) {
+        display: none;   
     }
-} */
+}
 
 form {
     position: relative;
+    z-index: 10000;
+    
+    &.selected label {
+        top: 0;
+        font-size: 10px;
+        font-weight: 600;
+    }
+    
+    &.selected input {
+        color: white;   
+    }
 }
 
 .input {
@@ -218,12 +219,6 @@ label {
     text-transform: uppercase;
     letter-spacing: 2px;
     
-    &.selected {
-        top: 0;
-        font-size: 10px;
-        font-weight: 600;
-    }
-    
     @media screen and (max-width: 500px) {
         font-size: 12px;
         letter-spacing: 1px;
@@ -236,6 +231,7 @@ label {
     font-size: 32px;
     color: $d-blue;
     position: absolute;
+    z-index: 1000;
     max-width: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -251,8 +247,9 @@ label {
     -ms-perspective: 1200px;
     
     @media screen and (max-width: 700px) {
-        font-size: 12px;   
-        right: 50%;
+        font-size: 12px;
+        top: 45%;
+        right: 56%;
     }
     
     & h1 {
@@ -312,11 +309,21 @@ a {
 
 .addthis_native_toolbox {
     position: absolute;
-    bottom: 10px;
-    left: 15px;
+    bottom: 20%;
+    left: 25%;
+    transform: translateX(-50%);
     
     @media screen and (max-width: 600px) {
-        display: none;   
+        transform: none;
+        left: 0;
+        right: 0;
+        text-align: center;
+        bottom: 50px;
+        margin: auto;
+    }
+    
+    .at-share-tbx-element a.at300b {
+        float: none;
     }
     
     a {

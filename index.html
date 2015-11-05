@@ -17,13 +17,16 @@
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         
         <link href='https://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=OpenSans' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        
+        <meta property="og:type"   content="website" /> 
+        <meta property="og:image" content="http://brycewrites.com/img/shareimg.jpg"/>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+<div id="wrapper">
     <div class="inputcontainer">
         <div class="overlay"></div>
         <form>
@@ -39,22 +42,31 @@
             <h1 class="bryceoutput"></h1>
         </div>
         
-        <a href="http://brycewrites.com" class="createnew">Make Your Own!</a>
+        <a class="createnew" href="/">Make Your Own!</a>
     </div>
 
-<div class="addthis_native_toolbox"></div>
-<!-- <div class="sharebtn"><span>Share</span></div> -->
-
+    <div class="addthis_native_toolbox"></div>
+    <a class="sharebtn" data-target="index"><span>Share</span></a>
 
 
     <p class="disclaimerinfo">This dumb thing was created by <br /><a href="http://caterdesigns.net" target="_blank">CaterDesigns</a> &amp; <a href="http://cjrw.com" target="_blank">CJRW Digital</a></p>
+</div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<!-- <input id="myTextField"/>
+<h2 class="alphaoutput"></h2>
+<h3 class="testoutput"></h3> -->
 
-        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-562e7cc15eb605e4" async="async"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+  <!--      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+            var addthis_config = addthis_config||{};
+            addthis_config.pubid = 'ra-562e7cc15eb605e4';
+        </script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -65,7 +77,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
 
     </body>
 </html>
